@@ -3,7 +3,7 @@ let albums = [];
 let filteredAlbums = [];
 
 // DOM Elements
-const albumGrid1 = document.getElementById('albumGrid');
+const albumGrid = document.getElementById('albumGrid');
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
 const genreFilter = document.getElementById('genreFilter');
@@ -14,7 +14,7 @@ const noResults = document.getElementById('noResults');
 async function init() {
     await loadAlbums();
     populateGenreFilter();
-    updateStats1();
+    updateStats();
     renderAlbums(albums);
     attachEventListeners();
 }
@@ -92,7 +92,7 @@ function createAlbumCard(album) {
 }
 
 // Search functionality
-function searchAlbums() {
+function searchAlbumsBug() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     const selectedGenre = genreFilter.value;
 
